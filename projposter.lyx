@@ -1,0 +1,1241 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass sciposter
+\begin_preamble
+%% Comment this out and adapt if you want a poster background
+%\usepackage{wallpaper}
+%\CenterWallPaper{1.1}{poster-background}
+
+% Set all margins to 1cm
+\setmargins[1cm]
+
+% Set up column layout
+\setlength\columnseprule{0pt}
+\setlength\columnsep{4.5pc}
+
+% Color settings:
+\usepackage{sectionbox}
+% a.) background color
+%\definecolor{mainCol}{RGB}{255,237,208}
+% b.) text color (mainly subsection headers)
+\definecolor{TextCol}{RGB}{0, 153, 153}
+% c.) section header color
+\definecolor{SectionCol}{RGB}{0, 153, 153}
+% d.) color of section boxes
+\definecolor{sectboxfillcol}{RGB}{255, 255, 255}
+\definecolor{subsectboxfillcol}{RGB}{255, 255, 255}
+
+% Large section titles
+\renewcommand{\sectionsize}{\Large}
+\definecolor{green}{RGB}{0, 153, 153}
+\end_preamble
+\options landscape,b0,largefonts,plainsections
+\use_default_options false
+\begin_modules
+multicol
+sectionbox
+\end_modules
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding auto-legacy
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "Latin Modern Sans"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type numerical
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 0
+\tocdepth -1
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout LeftLogo
+media/hitlogo
+\end_layout
+
+\begin_layout Title
+
+\color green
+Classification of Histopathology Images
+\end_layout
+
+\begin_layout Author
+Adam Aharony
+\end_layout
+
+\begin_layout Institute
+Deep Learning,
+ 2020 Spring Semester with Dr.
+ Jonathan Rubin,
+ Holon Institute of Technology.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Section*
+Some advices
+\end_layout
+
+\begin_layout Subsubsection*
+Appearance
+\end_layout
+
+\begin_layout Itemize
+See 
+\family sans
+Document\SpecialChar menuseparator
+Settings\SpecialChar menuseparator
+\SpecialChar LaTeX
+ Preamble
+\family default
+ for some possibilities to adjust the appearance of your poster.
+ Also check 
+\family sans
+Document\SpecialChar menuseparator
+Settings\SpecialChar menuseparator
+Document Class\SpecialChar menuseparator
+Class Options
+\family default
+ for some general settings.
+ Please refer to the 
+\family sans
+sciposter
+\family default
+ manual for possible values.
+\end_layout
+
+\begin_layout Subsubsection*
+Logo
+\end_layout
+
+\begin_layout Itemize
+You can use the 
+\family sans
+LeftLogo
+\family default
+ and 
+\family sans
+RightLogo
+\family default
+ style to insert graphic logos in the header of your poster.
+ The logos need to be given as file names (with our without extension) and with full path,
+ if the files are not in the TEXMF directory.
+\end_layout
+
+\begin_layout Itemize
+Note that the logos only appear if you do not specify a 
+\begin_inset Quotes eld
+\end_inset
+
+Conference
+\begin_inset Quotes erd
+\end_inset
+
+ (i.
+\begin_inset space \thinspace{}
+\end_inset
+
+e.,
+ no foot line).
+\end_layout
+
+\begin_layout Subsubsection*
+Columns and Boxes
+\end_layout
+
+\begin_layout Itemize
+The 
+\family sans
+Columns
+\family default
+ and 
+\family sans
+(Section) Box
+\family default
+ insets can be found at 
+\family sans
+Insert\SpecialChar menuseparator
+Custom Insets.
+\end_layout
+
+\begin_layout Itemize
+Instead of the Section Boxes,
+ you can also use the differently looking Color Boxes via the 
+\begin_inset Quotes eld
+\end_inset
+
+Color Boxes
+\begin_inset Quotes erd
+\end_inset
+
+ module.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+4
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Flex SectionBox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 2
+status collapsed
+
+\begin_layout Plain Layout
+Abstract
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \quad{}
+\end_inset
+
+
+\size small
+\emph on
+As a part of the Deep Learning course in the spring semester of 2020 end-of-semester project,
+ I was given the task of developing a model that is given an image of a biopsy scan,
+ 5.000
+\begin_inset Formula $\times$
+\end_inset
+
+5.000 pixels (RGB) in size.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \quad{}
+\end_inset
+
+
+\size small
+\emph on
+The model needs to classify the type of cell(s) scanned within 8 categories (tumor,
+ stroma,
+ complex,
+ lympho,
+ debris,
+ mucosa,
+ addipose,
+ empty),
+ with a high-enough accuracy rate.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Flex SectionBox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 2
+status collapsed
+
+\begin_layout Plain Layout
+Background
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \quad{}
+\end_inset
+
+The train dataset is called 
+\shape italic
+colorectal_histology
+\shape default
+ and available online in the Tensorflow Datasets website.
+ It features 5.000 total images of 150
+\begin_inset Formula $\times$
+\end_inset
+
+150 pixels (RGB),
+ equally divided into 8 categories:
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="5">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tumor
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename media/examples/tumor.png
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Debris
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename media/examples/debris.png
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Stroma
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename media/examples/stroma.png
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mucosa
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename media/examples/mucosa.png
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Complex
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename media/examples/complex.png
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Addipose
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename media/examples/addipose.png
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Lympho
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename media/examples/lympho.png
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Empty
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename media/examples/empty.png
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Flex SectionBox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 2
+status collapsed
+
+\begin_layout Plain Layout
+Initial Model
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \quad{}
+\end_inset
+
+
+\bar under
+Both models are based on the well-known VGG16 architecture
+\bar default
+.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \quad{}
+\end_inset
+
+The initial model is made up of the following architecture:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename media/plots/model_plot.eps
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagram of initial model architecture
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \quad{}
+\end_inset
+
+Basically,
+ it's a variation of the VGG16 model,
+ with a 64 neuron Dense layer before the output layer.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \quad{}
+\end_inset
+
+This model was trained from scratch on 4.440 images (88,8% of the data) with the Adam (Adaptive Moment Estimation) optimiser for 20 epochs with a batch size of 32 and scored approximately 80% accuracy (with the remaining 11,2% of the images (560) as the validation set).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+columnbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Flex SectionBox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 2
+status collapsed
+
+\begin_layout Plain Layout
+Modified Model
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \quad{}
+\end_inset
+
+In order to make the model converge even faster and perhaps have even better accuracy,
+ I modified the model to incorporate data augmentation and batch normalisation,
+ while adding a Dropout layer before the output layer.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \quad{}
+\end_inset
+
+This model was trained by transfer learning on 4.440 images (88,8% of the data) with imagenet weights,
+ with the Adam (Adaptive Moment Estimation) optimiser for 20 epochs with a batch size of 32 and scored approximately 90% accuracy (with the remaining 11,2% of the images (560) as the validation set).
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename media/plots/modified_model_plot.eps
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagram of modified model architecture
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Flex SectionBox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 2
+status collapsed
+
+\begin_layout Plain Layout
+Findings
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \quad{}
+\end_inset
+
+Because the modified model has a better accuracy rate,
+ I chose to use it.
+ Findings were calculated exactly like in prior excercises:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename media/plots/confusion_matrix.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Modified model's confusion matrix
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename media/plots/features_vector.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Modified model's features vector
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+columnbreak
+\end_layout
+
+\end_inset
+
+
+\begin_inset Flex SectionBox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 2
+status collapsed
+
+\begin_layout Plain Layout
+Results
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \quad{}
+\end_inset
+
+We feed the following image of 5.000
+\begin_inset Formula $\times$
+\end_inset
+
+5.000 pixels (RGB) into the modified model:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename media/examples/large.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Large biopsy example image from the 
+\shape italic
+colorectal_histology_large
+\shape default
+ dataset
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \quad{}
+\end_inset
+
+In order for this image to be accepted by the model,
+ it needs to be sliced into a grid with tiles of 150
+\begin_inset Formula $\times$
+\end_inset
+
+150 pixels (RGB).
+ I get a model prediction for each tile,
+ and plot it with different colours for each category next to the original image:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename media/large/large7.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Colourmap image output after passing through the model
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \quad{}
+\end_inset
+
+I performed a similar process to find the 
+\begin_inset Quotes eld
+\end_inset
+
+tumor certainty
+\begin_inset Quotes erd
+\end_inset
+
+ of each grid tile:
+ I got the 
+\begin_inset Quotes eld
+\end_inset
+
+tumor
+\begin_inset Quotes erd
+\end_inset
+
+ prediction for each tile,
+ and then I plot it as a heatmap:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+placement document
+alignment document
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename media/large-heatmap/large7.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Heatmap image output after passing through the model
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+columnbreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Flex SectionBox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 2
+status collapsed
+
+\begin_layout Plain Layout
+Conclusions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Performing transfer learning helps achieve faster model convergence with adequate accuracy.
+\end_layout
+
+\begin_layout Enumerate
+Data generation and batch normalisation helps generalise the data and thus also helps achieve faster model convergence with adequate accuracy.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Flex SectionBox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 2
+status collapsed
+
+\begin_layout Plain Layout
+References
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Deep Learning Course Excercises and Class Work.
+\end_layout
+
+\begin_layout Enumerate
+
+\shape italic
+colorectal_histology
+\shape default
+ Dataset Page on Tensorflow Datasets
+\size scriptsize
+
+\begin_inset Newline newline
+\end_inset
+
+(https://www.tensorflow.org/datasets/catalog/colorectal_histology)
+\size default
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\shape italic
+colorectal_histology_large
+\shape default
+ Dataset Page on Tensorflow Datasets
+\size scriptsize
+
+\begin_inset Newline newline
+\end_inset
+
+(https://www.tensorflow.org/datasets/catalog/colorectal_histology_large)
+\size default
+.
+\end_layout
+
+\begin_layout Enumerate
+Tensorflow Documentation
+\size scriptsize
+
+\begin_inset Newline newline
+\end_inset
+
+(https://www.tensorflow.org/api_docs/python/tf)
+\size default
+.
+\end_layout
+
+\begin_layout Enumerate
+Keras Documentation
+\size scriptsize
+
+\begin_inset Newline newline
+\end_inset
+
+(https://keras.io/api/)
+\size default
+.
+\end_layout
+
+\begin_layout Enumerate
+NumPy Documentation
+\size scriptsize
+
+\begin_inset Newline newline
+\end_inset
+
+(https://numpy.org/doc/)
+\size default
+.
+\end_layout
+
+\begin_layout Enumerate
+Matplotlib Documentation
+\size scriptsize
+
+\begin_inset Newline newline
+\end_inset
+
+(https://matplotlib.org/stable/contents.html)
+\size default
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
